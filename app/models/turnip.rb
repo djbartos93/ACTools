@@ -1,0 +1,2 @@
+class Turnip < ApplicationRecord
+end

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Purchaseprice:</strong>
+  <%= @turnip.purchasePrice %>
+</p>
+
+<p>
+  <strong>Amountpurchased:</strong>
+  <%= @turnip.amountPurchased %>
+</p>
+
+<p>
+  <strong>Saleprice:</strong>
+  <%= @turnip.salePrice %>
+</p>
+
+<p>
+  <strong>Spentbells:</strong>
+  <%= @turnip.spentBells %>
+</p>
+
+<p>
+  <strong>Madebells:</strong>
+  <%= @turnip.madeBells %>
+</p>
+
+<%= link_to 'Edit', edit_turnip_path(@turnip) %> |
+<%= link_to 'Back', turnips_path %>

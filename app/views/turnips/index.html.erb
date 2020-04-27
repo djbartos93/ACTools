@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Turnips</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Purchaseprice</th>
+      <th>Amountpurchased</th>
+      <th>Saleprice</th>
+      <th>Spentbells</th>
+      <th>Madebells</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @turnips.each do |turnip| %>
+      <tr>
+        <td><%= turnip.purchasePrice %></td>
+        <td><%= turnip.amountPurchased %></td>
+        <td><%= turnip.salePrice %></td>
+        <td><%= turnip.spentBells %></td>
+        <td><%= turnip.madeBells %></td>
+        <td><%= link_to 'Show', turnip %></td>
+        <td><%= link_to 'Edit', edit_turnip_path(turnip) %></td>
+        <td><%= link_to 'Destroy', turnip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Turnip', new_turnip_path %>
