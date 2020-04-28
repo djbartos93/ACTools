@@ -1,0 +1,2 @@
+class Houseware < ApplicationRecord
+end

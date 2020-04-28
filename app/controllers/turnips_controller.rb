@@ -10,7 +10,22 @@ class TurnipsController < ApplicationController
   # GET /turnips/1
   # GET /turnips/1.json
   def show
+
   end
+
+  def calc_spent(amount, cost)
+    @bells_spent = amount * cost
+    puts @bells_spent
+    return @bells_spent
+  end
+  helper_method :calc_spent
+
+  def calc_total(amount, saleprice)
+    @bells_total = amount * saleprice
+    puts @bells_total
+    return @bells_total
+  end
+  helper_method :calc_total
 
   # GET /turnips/new
   def new
@@ -69,6 +84,6 @@ class TurnipsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def turnip_params
-      params.require(:turnip).permit(:purchasePrice, :amountPurchased, :salePrice, :spentBells, :madeBells)
+      params.require(:turnip).permit(:purchasePrice, :amountPurchased, :salePrice, :spentBells, :madeBells, :week, :tap_link)
     end
 end

@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Week Of:</strong>
+  <%= @turnip.week_of %>
+</p>
+
+<p>
   <strong>Purchaseprice:</strong>
   <%= @turnip.purchasePrice %>
 </p>
@@ -24,6 +29,26 @@
   <strong>Madebells:</strong>
   <%= @turnip.madeBells %>
 </p>
+<p>
+  <strong>Bells Spent on Turnips:</strong>
+<%= calc_spent(@turnip.amountPurchased, @turnip.purchasePrice) %>
+</p>
+
+<p>
+  <strong>Total bells made:</strong>
+<%= calc_total(@turnip.amountPurchased, @turnip.salePrice) %>
+</p>
+
+<p>
+<strong>Total bells profit (spent - made):</strong>
+<%= calc_total(@turnip.amountPurchased, @turnip.salePrice) - calc_spent(@turnip.amountPurchased, @turnip.purchasePrice) %>
+</p>
+
+<p>
+  <strong>turnipprophet.io link week end:</strong>
+  <%= @turnip.tap_link %>
+</p>
+
 
 <%= link_to 'Edit', edit_turnip_path(@turnip) %> |
 <%= link_to 'Back', turnips_path %>
