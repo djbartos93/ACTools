@@ -1,0 +1,43 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  image: MyString
+  size: MyString
+  diy: false
+  buy: 1
+  sell: 1
+  color_1: MyString
+  color_2: MyString
+  source: MyString
+  source_notes: MyText
+  version: MyString
+  hha_concept_1: MyString
+  hha_concept_2: MyString
+  hha_series: MyString
+  tag: MyString
+  catalog: MyString
+  filename: MyString
+  internal_id: 1
+  unieque_entry_id: MyString
+
+two:
+  name: MyString
+  image: MyString
+  size: MyString
+  diy: false
+  buy: 1
+  sell: 1
+  color_1: MyString
+  color_2: MyString
+  source: MyString
+  source_notes: MyText
+  version: MyString
+  hha_concept_1: MyString
+  hha_concept_2: MyString
+  hha_series: MyString
+  tag: MyString
+  catalog: MyString
+  filename: MyString
+  internal_id: 1
+  unieque_entry_id: MyString

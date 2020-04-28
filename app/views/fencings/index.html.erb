@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fencings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Diy</th>
+      <th>Buy</th>
+      <th>Sell</th>
+      <th>Source</th>
+      <th>Source notes</th>
+      <th>Version</th>
+      <th>Filename</th>
+      <th>Internal</th>
+      <th>Unique entry</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fencings.each do |fencing| %>
+      <tr>
+        <td><%= fencing.name %></td>
+        <td><%= fencing.image %></td>
+        <td><%= fencing.diy %></td>
+        <td><%= fencing.buy %></td>
+        <td><%= fencing.sell %></td>
+        <td><%= fencing.source %></td>
+        <td><%= fencing.source_notes %></td>
+        <td><%= fencing.version %></td>
+        <td><%= fencing.filename %></td>
+        <td><%= fencing.internal_id %></td>
+        <td><%= fencing.unique_entry_id %></td>
+        <td><%= link_to 'Show', fencing %></td>
+        <td><%= link_to 'Edit', edit_fencing_path(fencing) %></td>
+        <td><%= link_to 'Destroy', fencing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fencing', new_fencing_path %>

@@ -1,0 +1,172 @@
+<%= form_with(model: wallmount, local: true) do |form| %>
+  <% if wallmount.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(wallmount.errors.count, "error") %> prohibited this wallmount from being saved:</h2>
+
+      <ul>
+        <% wallmount.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :images %>
+    <%= form.text_field :images %>
+  </div>
+
+  <div class="field">
+    <%= form.label :variation %>
+    <%= form.text_field :variation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body_title %>
+    <%= form.text_field :body_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pattern %>
+    <%= form.text_field :pattern %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pattern_title %>
+    <%= form.text_field :pattern_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :diy %>
+    <%= form.check_box :diy %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body_customize %>
+    <%= form.check_box :body_customize %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pattern_customize %>
+    <%= form.check_box :pattern_customize %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kit_cost %>
+    <%= form.number_field :kit_cost %>
+  </div>
+
+  <div class="field">
+    <%= form.label :buy %>
+    <%= form.number_field :buy %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sell %>
+    <%= form.number_field :sell %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color_1 %>
+    <%= form.text_field :color_1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color_2 %>
+    <%= form.text_field :color_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :size %>
+    <%= form.text_field :size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :source %>
+    <%= form.text_field :source %>
+  </div>
+
+  <div class="field">
+    <%= form.label :source_notes %>
+    <%= form.text_area :source_notes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :version %>
+    <%= form.text_field :version %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hha_concept_1 %>
+    <%= form.text_field :hha_concept_1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hha_concept_2 %>
+    <%= form.text_field :hha_concept_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hha_series %>
+    <%= form.text_field :hha_series %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hha_set %>
+    <%= form.text_field :hha_set %>
+  </div>
+
+  <div class="field">
+    <%= form.label :interact %>
+    <%= form.check_box :interact %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tag %>
+    <%= form.text_field :tag %>
+  </div>
+
+  <div class="field">
+    <%= form.label :door_deco %>
+    <%= form.check_box :door_deco %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lighting_type %>
+    <%= form.text_field :lighting_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :catalog %>
+    <%= form.text_field :catalog %>
+  </div>
+
+  <div class="field">
+    <%= form.label :filename %>
+    <%= form.text_field :filename %>
+  </div>
+
+  <div class="field">
+    <%= form.label :variant_id %>
+    <%= form.text_field :variant_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :internal_id %>
+    <%= form.text_field :internal_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :unieue_entry_id %>
+    <%= form.text_field :unieue_entry_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

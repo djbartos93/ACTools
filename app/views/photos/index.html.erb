@@ -1,0 +1,67 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Photos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Variation</th>
+      <th>Body title</th>
+      <th>Pattern</th>
+      <th>Pattern title</th>
+      <th>Diy</th>
+      <th>Customize</th>
+      <th>Kit cost</th>
+      <th>Buy</th>
+      <th>Sell</th>
+      <th>Color 1</th>
+      <th>Color 2</th>
+      <th>Size</th>
+      <th>Source</th>
+      <th>Version</th>
+      <th>Catalog</th>
+      <th>Filename</th>
+      <th>Variant</th>
+      <th>Internal</th>
+      <th>Unique entry</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @photos.each do |photo| %>
+      <tr>
+        <td><%= photo.name %></td>
+        <td><%= photo.image %></td>
+        <td><%= photo.variation %></td>
+        <td><%= photo.body_title %></td>
+        <td><%= photo.pattern %></td>
+        <td><%= photo.pattern_title %></td>
+        <td><%= photo.diy %></td>
+        <td><%= photo.customize %></td>
+        <td><%= photo.kit_cost %></td>
+        <td><%= photo.buy %></td>
+        <td><%= photo.sell %></td>
+        <td><%= photo.color_1 %></td>
+        <td><%= photo.color_2 %></td>
+        <td><%= photo.size %></td>
+        <td><%= photo.source %></td>
+        <td><%= photo.version %></td>
+        <td><%= photo.catalog %></td>
+        <td><%= photo.filename %></td>
+        <td><%= photo.variant_id %></td>
+        <td><%= photo.internal_id %></td>
+        <td><%= photo.unique_entry_id %></td>
+        <td><%= link_to 'Show', photo %></td>
+        <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
+        <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Photo', new_photo_path %>

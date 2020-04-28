@@ -1,0 +1,2 @@
+class Wallmount < ApplicationRecord
+end

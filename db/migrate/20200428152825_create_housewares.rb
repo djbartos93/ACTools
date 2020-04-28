@@ -6,6 +6,7 @@ class CreateHousewares < ActiveRecord::Migration[6.0]
       t.string :variation
       t.string :body_title
       t.string :pattern
+      t.string :pattern_title
       t.boolean :diy
       t.boolean :body_customize
       t.integer :kit_cost

@@ -1,0 +1,142 @@
+<%= form_with(model: wallpaper, local: true) do |form| %>
+  <% if wallpaper.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(wallpaper.errors.count, "error") %> prohibited this wallpaper from being saved:</h2>
+
+      <ul>
+        <% wallpaper.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vfx %>
+    <%= form.check_box :vfx %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vfx_type %>
+    <%= form.text_field :vfx_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :diy %>
+    <%= form.check_box :diy %>
+  </div>
+
+  <div class="field">
+    <%= form.label :buy %>
+    <%= form.number_field :buy %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sell %>
+    <%= form.number_field :sell %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color_1 %>
+    <%= form.text_field :color_1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color_2 %>
+    <%= form.text_field :color_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :source %>
+    <%= form.text_field :source %>
+  </div>
+
+  <div class="field">
+    <%= form.label :source_notes %>
+    <%= form.text_area :source_notes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :catalog %>
+    <%= form.text_field :catalog %>
+  </div>
+
+  <div class="field">
+    <%= form.label :window_type %>
+    <%= form.text_field :window_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :window_color %>
+    <%= form.text_field :window_color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pane_type %>
+    <%= form.text_field :pane_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :curtain %>
+    <%= form.text_field :curtain %>
+  </div>
+
+  <div class="field">
+    <%= form.label :curtain_color %>
+    <%= form.text_field :curtain_color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :celing_type %>
+    <%= form.text_field :celing_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hha_concept_1 %>
+    <%= form.text_field :hha_concept_1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hha_concept_2 %>
+    <%= form.text_field :hha_concept_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tag %>
+    <%= form.text_field :tag %>
+  </div>
+
+  <div class="field">
+    <%= form.label :version %>
+    <%= form.text_field :version %>
+  </div>
+
+  <div class="field">
+    <%= form.label :filename %>
+    <%= form.text_field :filename %>
+  </div>
+
+  <div class="field">
+    <%= form.label :internal_id %>
+    <%= form.number_field :internal_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :unique_entry_id %>
+    <%= form.text_field :unique_entry_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

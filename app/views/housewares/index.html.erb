@@ -51,20 +51,20 @@
         <td><%= houseware.kit_cost %></td>
         <td><%= houseware.buy %></td>
         <td><%= houseware.sell %></td>
-        <td><%= houseware.color1 %></td>
-        <td><%= houseware.color2 %></td>
+        <td><%= houseware.color_1 %></td>
+        <td><%= houseware.color_2 %></td>
         <td><%= houseware.size %></td>
         <td><%= houseware.source %></td>
         <td><%= houseware.source_notes %></td>
         <td><%= houseware.version %></td>
-        <td><%= houseware.hha_concept1 %></td>
-        <td><%= houseware.hha_concept2 %></td>
+        <td><%= houseware.hha_concept_1 %></td>
+        <td><%= houseware.hha_concept_2 %></td>
         <td><%= houseware.hha_series %></td>
         <td><%= houseware.hha_set %></td>
         <td><%= houseware.interact %></td>
         <td><%= houseware.tag %></td>
         <td><%= houseware.speaker_type %></td>
-        <td><%= houseware.listing_type %></td>
+        <td><%= houseware.lighting_type %></td>
         <td><%= houseware.catalog %></td>
         <td><%= houseware.filename %></td>
         <td><%= houseware.variant_id %></td>
@@ -79,5 +79,13 @@
 </table>
 
 <br>
+
+<div>
+  <h4> import data! </h4>
+  <%= form_tag import_housewares_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "import file" %>
+  <% end %>
+
 
 <%= link_to 'New Houseware', new_houseware_path %>

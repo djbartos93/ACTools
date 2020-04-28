@@ -61,6 +61,11 @@ class HousewaresController < ApplicationController
     end
   end
 
+  def import
+    Houseware.my_import(params[:file])
+    redirect_to root_url, notice: "Successfully Imported Data!"
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_houseware

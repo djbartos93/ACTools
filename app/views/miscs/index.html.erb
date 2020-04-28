@@ -1,0 +1,87 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Miscs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Images</th>
+      <th>Variation</th>
+      <th>Body title</th>
+      <th>Pattern</th>
+      <th>Pattern title</th>
+      <th>Diy</th>
+      <th>Body customize</th>
+      <th>Pattern customize</th>
+      <th>Kit cost</th>
+      <th>Buy</th>
+      <th>Sell</th>
+      <th>Color 1</th>
+      <th>Color 2</th>
+      <th>Size</th>
+      <th>Source</th>
+      <th>Source notes</th>
+      <th>Version</th>
+      <th>Hha concept 1</th>
+      <th>Hha concept 2</th>
+      <th>Hha series</th>
+      <th>Hha set</th>
+      <th>Interact</th>
+      <th>Tag</th>
+      <th>Speaker type</th>
+      <th>Lighting type</th>
+      <th>Catalog</th>
+      <th>Filename</th>
+      <th>Variant</th>
+      <th>Internal</th>
+      <th>Unieue entry</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @miscs.each do |misc| %>
+      <tr>
+        <td><%= misc.name %></td>
+        <td><%= misc.images %></td>
+        <td><%= misc.variation %></td>
+        <td><%= misc.body_title %></td>
+        <td><%= misc.pattern %></td>
+        <td><%= misc.pattern_title %></td>
+        <td><%= misc.diy %></td>
+        <td><%= misc.body_customize %></td>
+        <td><%= misc.pattern_customize %></td>
+        <td><%= misc.kit_cost %></td>
+        <td><%= misc.buy %></td>
+        <td><%= misc.sell %></td>
+        <td><%= misc.color_1 %></td>
+        <td><%= misc.color_2 %></td>
+        <td><%= misc.size %></td>
+        <td><%= misc.source %></td>
+        <td><%= misc.source_notes %></td>
+        <td><%= misc.version %></td>
+        <td><%= misc.hha_concept_1 %></td>
+        <td><%= misc.hha_concept_2 %></td>
+        <td><%= misc.hha_series %></td>
+        <td><%= misc.hha_set %></td>
+        <td><%= misc.interact %></td>
+        <td><%= misc.tag %></td>
+        <td><%= misc.speaker_type %></td>
+        <td><%= misc.lighting_type %></td>
+        <td><%= misc.catalog %></td>
+        <td><%= misc.filename %></td>
+        <td><%= misc.variant_id %></td>
+        <td><%= misc.internal_id %></td>
+        <td><%= misc.unieue_entry_id %></td>
+        <td><%= link_to 'Show', misc %></td>
+        <td><%= link_to 'Edit', edit_misc_path(misc) %></td>
+        <td><%= link_to 'Destroy', misc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Misc', new_misc_path %>

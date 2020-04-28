@@ -1,0 +1,75 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Wallpapers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Vfx</th>
+      <th>Vfx type</th>
+      <th>Diy</th>
+      <th>Buy</th>
+      <th>Sell</th>
+      <th>Color 1</th>
+      <th>Color 2</th>
+      <th>Source</th>
+      <th>Source notes</th>
+      <th>Catalog</th>
+      <th>Window type</th>
+      <th>Window color</th>
+      <th>Pane type</th>
+      <th>Curtain</th>
+      <th>Curtain color</th>
+      <th>Celing type</th>
+      <th>Hha concept 1</th>
+      <th>Hha concept 2</th>
+      <th>Tag</th>
+      <th>Version</th>
+      <th>Filename</th>
+      <th>Internal</th>
+      <th>Unique entry</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wallpapers.each do |wallpaper| %>
+      <tr>
+        <td><%= wallpaper.name %></td>
+        <td><%= wallpaper.image %></td>
+        <td><%= wallpaper.vfx %></td>
+        <td><%= wallpaper.vfx_type %></td>
+        <td><%= wallpaper.diy %></td>
+        <td><%= wallpaper.buy %></td>
+        <td><%= wallpaper.sell %></td>
+        <td><%= wallpaper.color_1 %></td>
+        <td><%= wallpaper.color_2 %></td>
+        <td><%= wallpaper.source %></td>
+        <td><%= wallpaper.source_notes %></td>
+        <td><%= wallpaper.catalog %></td>
+        <td><%= wallpaper.window_type %></td>
+        <td><%= wallpaper.window_color %></td>
+        <td><%= wallpaper.pane_type %></td>
+        <td><%= wallpaper.curtain %></td>
+        <td><%= wallpaper.curtain_color %></td>
+        <td><%= wallpaper.celing_type %></td>
+        <td><%= wallpaper.hha_concept_1 %></td>
+        <td><%= wallpaper.hha_concept_2 %></td>
+        <td><%= wallpaper.tag %></td>
+        <td><%= wallpaper.version %></td>
+        <td><%= wallpaper.filename %></td>
+        <td><%= wallpaper.internal_id %></td>
+        <td><%= wallpaper.unique_entry_id %></td>
+        <td><%= link_to 'Show', wallpaper %></td>
+        <td><%= link_to 'Edit', edit_wallpaper_path(wallpaper) %></td>
+        <td><%= link_to 'Destroy', wallpaper, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Wallpaper', new_wallpaper_path %>
