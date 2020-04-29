@@ -5,6 +5,10 @@ class HousewaresController < ApplicationController
   # GET /housewares.json
   def index
     @housewares = Houseware.all
+    respond_to do |format|
+      format.html
+      format.json { render json: UserDatatable.new(params) }
+    end
   end
 
   # GET /housewares/1
