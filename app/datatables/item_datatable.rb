@@ -1,15 +1,16 @@
-class HousewareDatatable < AjaxDatatablesRails::ActiveRecord
+class ItemDatatable < AjaxDatatablesRails::ActiveRecord
 
   def view_columns
     puts "this is the view columns method"
     # Declare strings in this format: ModelName.column_name
     # or in aliased_join_table.column_name format
     @view_columns ||= {
-      filename: { source: "Houseware.filename"},
-      name: { source: "Houseware.name"},
-      buy: { source: "Houseware.buy"},
-      sell: { source: "Houseware.sell"},
-      tag: { source: "Houseware.sell"}
+      filename: { source: "Item.filename"},
+      variation: { source: "Item.variation"},
+      name: { source: "Item.name"},
+      buy: { source: "Item.buy"},
+      sell: { source: "Item.sell"},
+      category: { source: "Item.category"}
 
       # id: { source: "User.id", cond: :eq },
       # name: { source: "User.name", cond: :like }
@@ -25,7 +26,9 @@ class HousewareDatatable < AjaxDatatablesRails::ActiveRecord
         image: record.image,
         buy: record.buy,
         sell: record.sell,
-        tag: record.tag,
+        category: record.category,
+        closet_image: record.closet_image,
+        variation: record.variation,
         DT_RowID: record.id
       }
     end
@@ -35,7 +38,7 @@ class HousewareDatatable < AjaxDatatablesRails::ActiveRecord
     # insert query here
     # User.all
     puts "is this working at the get raw records?"
-    Houseware.all
+    Item.where(category: 'bottoms')
   end
 
 end

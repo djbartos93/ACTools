@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_28_174203) do
+ActiveRecord::Schema.define(version: 2020_04_29_155027) do
 
   create_table "fencings", force: :cascade do |t|
     t.string "name"
@@ -87,6 +87,9 @@ ActiveRecord::Schema.define(version: 2020_04_28_174203) do
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "pattern_customize"
   end
+
+# Could not dump table "items" because of following StandardError
+#   Unknown type '' for column 'style'
 
   create_table "miscs", force: :cascade do |t|
     t.string "name"

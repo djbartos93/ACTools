@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1> import </h1>
+<div>
+  <h4> import data! </h4>
+  <%= form_tag import_items_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "import file" %>
+  <% end %>
+
+<h1>Items</h1>
+
+<div class="container">
+<table id="items-datatable" class="display table table-striped table-bordered" data-source="<%= items_path(format: :json) %>">
+
+  <thead>
+    <tr>
+      <th>Expand</th>
+      <th>Name</th>
+      <th>Variation</th>
+      <th>Buy</th>
+      <th>Sell</th>
+      <th>Category</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
+<br></br>
+</div>
+
+
+
+
+<%= link_to 'New Item', new_item_path %>

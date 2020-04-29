@@ -4,7 +4,7 @@ class HousewaresController < ApplicationController
   # GET /housewares
   # GET /housewares.json
   def index
-    
+
     respond_to do |format|
       format.html
       format.json { render json: HousewareDatatable.new(params) }
@@ -78,6 +78,6 @@ class HousewaresController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def houseware_params
-      params.require(:houseware).permit(:name, :image, :variation, :body_title, :pattern, :diy, :body_customize, :kit_cost, :buy, :sell, :color1, :color2, :size, :source, :source_notes, :version, :hha_concept1, :hha_concept2, :hha_series, :hha_set, :interact, :tag, :speaker_type, :listing_type, :catalog, :filename, :variant_id, :internal_id, :unique_entry_id)
+      params.require(:houseware).permit(:name, :image, :variation, :body_title, :pattern, :diy, :body_customize, :kit_cost, :buy, :sell, :color_1, :color_2, :size, :source, :source_notes, :version, :hha_concept_1, :hha_concept_2, :hha_series, :hha_set, :interact, :tag, :speaker_type, :lighting_type, :catalog, :filename, :variant_id, :internal_id, :unique_entry_id)
     end
 end

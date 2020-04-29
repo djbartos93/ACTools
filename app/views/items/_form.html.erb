@@ -1,0 +1,273 @@
+<%= form_with(model: item, local: true) do |form| %>
+  <% if item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+      <ul>
+        <% item.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :variation %>
+    <%= form.text_field :variation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body_title %>
+    <%= form.text_field :body_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pattern %>
+    <%= form.text_field :pattern %>
+  </div>
+
+  <div class="field">
+    <%= form.label :patern_title %>
+    <%= form.text_field :patern_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :diy %>
+    <%= form.check_box :diy %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body_customize %>
+    <%= form.text_field :body_customize %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pattern_customize %>
+    <%= form.text_field :pattern_customize %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kit_cost %>
+    <%= form.text_field :kit_cost %>
+  </div>
+
+  <div class="field">
+    <%= form.label :buy %>
+    <%= form.number_field :buy %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sell %>
+    <%= form.number_field :sell %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color_1 %>
+    <%= form.text_field :color_1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color_2 %>
+    <%= form.text_field :color_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :size %>
+    <%= form.text_field :size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :source %>
+    <%= form.text_field :source %>
+  </div>
+
+  <div class="field">
+    <%= form.label :source_notes %>
+    <%= form.text_area :source_notes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :version %>
+    <%= form.text_field :version %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hha_concept_1 %>
+    <%= form.text_field :hha_concept_1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hha_concept_2 %>
+    <%= form.text_field :hha_concept_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hha_series %>
+    <%= form.text_field :hha_series %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hha_set %>
+    <%= form.text_field :hha_set %>
+  </div>
+
+  <div class="field">
+    <%= form.label :interact %>
+    <%= form.check_box :interact %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tag %>
+    <%= form.check_box :tag %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :speaker_type %>
+    <%= form.text_field :speaker_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lighting_type %>
+    <%= form.text_field :lighting_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :catalog %>
+    <%= form.text_field :catalog %>
+  </div>
+
+  <div class="field">
+    <%= form.label :filename %>
+    <%= form.text_field :filename %>
+  </div>
+
+  <div class="field">
+    <%= form.label :variant_id %>
+    <%= form.text_field :variant_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :internal_id %>
+    <%= form.text_field :internal_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :door_deco %>
+    <%= form.check_box :door_deco %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vfx %>
+    <%= form.check_box :vfx %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vfx_type %>
+    <%= form.text_field :vfx_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :window_type %>
+    <%= form.text_field :window_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :window_color %>
+    <%= form.text_field :window_color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pane_type %>
+    <%= form.text_field :pane_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :curtain_type %>
+    <%= form.text_field :curtain_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :curtain_color %>
+    <%= form.text_field :curtain_color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ceiling_type %>
+    <%= form.text_field :ceiling_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :set %>
+    <%= form.text_field :set %>
+  </div>
+
+  <div class="field">
+    <%= form.label :uses %>
+    <%= form.number_field :uses %>
+  </div>
+
+  <div class="field">
+    <%= form.label :closet_image %>
+    <%= form.text_field :closet_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :storage_image %>
+    <%= form.text_field :storage_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :label_themes %>
+    <%= form.text_field :label_themes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :primary_shape %>
+    <%= form.text_field :primary_shape %>
+  </div>
+
+  <div class="field">
+    <%= form.label :secondary_shape %>
+    <%= form.text_field :secondary_shape %>
+  </div>
+
+  <div class="field">
+    <%= form.label :framed_image %>
+    <%= form.text_field :framed_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :album_image %>
+    <%= form.text_field :album_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :high_res_texture %>
+    <%= form.text_field :high_res_texture %>
+  </div>
+
+  <div class="field">
+    <%= form.label :genuine %>
+    <%= form.check_box :genuine %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.text_field :category %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

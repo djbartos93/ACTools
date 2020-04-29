@@ -10,6 +10,7 @@ require("@rails/activestorage").start()
 require("channels")
 require('datatables.net-bs4')
 require("packs/housewares")
+require("packs/items")
 
 import $ from 'jquery';
 global.$ = jQuery;

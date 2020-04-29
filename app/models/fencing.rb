@@ -1,2 +1,0 @@
-class Fencing < ApplicationRecord
-end

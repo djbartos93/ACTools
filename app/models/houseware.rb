@@ -1,5 +1,7 @@
 class Houseware < ApplicationRecord
 
+validates :name, uniqueness: true
+
 require 'csv'
 require 'activerecord-import/base'
 

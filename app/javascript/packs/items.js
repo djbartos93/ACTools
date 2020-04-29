@@ -11,16 +11,20 @@ function format ( d ) {
           '<td>Image:</td>'+
           '<td><img src="'+d.image+'">'+'</td>'+
         '</tr>'+
+        '<tr>'+
+          '<td>Closet Image:</td>'+
+          '<td><img src="'+d.closet_image+'">'+'</td>'+
+        '</tr>'+
     '</table>';
 }
 
 
 jQuery(document).ready(function() {
-  var table = $('#housewares-datatable').DataTable({
+  var table = $('#items-datatable').DataTable({
     "processing": true,
     "serverSide": true,
     "ajax": {
-      "url": $('#housewares-datatable').data('source')
+      "url": $('#items-datatable').data('source')
     },
     "pagingType": "full_numbers",
     "columns": [
@@ -31,9 +35,10 @@ jQuery(document).ready(function() {
         "defaultContent": ''
                       },
       {"data": "name"},
+      {"data": "variation"},
       {"data": "buy"},
       {"data": "sell"},
-      {"data": "tag"}
+      {"data": "category"}
     ],
     "order": [[1, 'asc']]
     // pagingType is optional, if you want full pagination controls.
@@ -41,7 +46,7 @@ jQuery(document).ready(function() {
     // available options.
   });
   // Add event listener for opening and closing details
-$('#housewares-datatable tbody').on('click', 'td.details-control', function () {
+$('#items-datatable tbody').on('click', 'td.details-control', function () {
     var tr = $(this).closest('tr');
     var row = table.row( tr );
 
