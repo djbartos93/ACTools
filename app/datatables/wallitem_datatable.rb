@@ -1,7 +1,4 @@
-class ItemDatatable < ApplicationDatatable
-
-
-
+class WallitemDatatable < ApplicationDatatable
 
   def catname
     @category ||= options[:category]
@@ -10,11 +7,14 @@ class ItemDatatable < ApplicationDatatable
 
   def get_raw_records
     catname
-    puts "************************************* raw records items"
+    puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& raw records wallitem"
     # insert query here
     # User.all
     puts "is this working at the get raw records?"
     Item.where(category: options[:category])
+
   end
+
+
 
 end

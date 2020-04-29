@@ -7,9 +7,10 @@ class ItemsController < ApplicationController
     @items = Item.all
     respond_to do |format|
       format.html
-      format.json { render json: ItemDatatable.new(params) }
+      format.json { render json: ItemDatatable.new(params, category: "wallpapers") }
     end
   end
+
 
   # GET /items/1
   # GET /items/1.json
@@ -68,6 +69,139 @@ class ItemsController < ApplicationController
   def import
     Item.my_import(params[:file])
     redirect_to items_url, notice: "Successfully Imported Data!"
+  end
+
+  def wall_mounted
+    respond_to do |format|
+      format.html
+      format.json { render json: ItemDatatable.new(params, category: "wall-mounted") }
+    end
+  end
+
+  def wallpaper
+    respond_to do |format|
+      format.html
+      format.json { render json: ItemDatatable.new(params, category: "wallpapers") }
+    end
+  end
+
+  def floor
+    respond_to do |format|
+      format.html
+      format.json { render json: ItemDatatable.new(params, category: "floors") }
+    end
+  end
+
+  def rug
+    respond_to do |format|
+      format.html
+      format.json { render json: ItemDatatable.new(params, category: "rugs") }
+    end
+  end
+
+  def fencing
+    respond_to do |format|
+      format.html
+      format.json { render json: ItemDatatable.new(params, category: "fencing") }
+    end
+  end
+
+  def photo
+    respond_to do |format|
+      format.html
+      format.json { render json: ItemDatatable.new(params, category: "photos") }
+    end
+  end
+
+  def poster
+    respond_to do |format|
+      format.html
+      format.json { render json: ItemDatatable.new(params, category: "posters") }
+    end
+  end
+
+  def tool
+    respond_to do |format|
+      format.html
+      format.json { render json: ItemDatatable.new(params, category: "tools") }
+    end
+  end
+
+  def clothes_top
+    respond_to do |format|
+      format.html
+      format.json { render json: ItemDatatable.new(params, category: "tops") }
+    end
+  end
+
+  def clothes_bottom
+    respond_to do |format|
+      format.html
+      format.json { render json: ItemDatatable.new(params, category: "bottoms") }
+    end
+  end
+
+  def clothes_dresse
+    respond_to do |format|
+      format.html
+      format.json { render json: ItemDatatable.new(params, category: "dresses") }
+    end
+  end
+
+  def headware
+    respond_to do |format|
+      format.html
+      format.json { render json: ItemDatatable.new(params, category: "headware") }
+    end
+  end
+
+  def accessories
+    respond_to do |format|
+      format.html
+      format.json { render json: ItemDatatable.new(params, category: "accessories") }
+    end
+  end
+
+  def sock
+    respond_to do |format|
+      format.html
+      format.json { render json: ItemDatatable.new(params, category: "sock") }
+    end
+  end
+
+  def shoe
+    respond_to do |format|
+      format.html
+      format.json { render json: ItemDatatable.new(params, category: "shoes") }
+    end
+  end
+
+  def bag
+    respond_to do |format|
+      format.html
+      format.json { render json: ItemDatatable.new(params, category: "bags") }
+    end
+  end
+
+  def umbreslla
+    respond_to do |format|
+      format.html
+      format.json { render json: ItemDatatable.new(params, category: "umbrellas") }
+    end
+  end
+
+  def music
+    respond_to do |format|
+      format.html
+      format.json { render json: ItemDatatable.new(params, category: "music") }
+    end
+  end
+
+  def art
+    respond_to do |format|
+      format.html
+      format.json { render json: ItemDatatable.new(params, category: "art") }
+    end
   end
 
   private

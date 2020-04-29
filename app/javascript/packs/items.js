@@ -18,7 +18,6 @@ function format ( d ) {
     '</table>';
 }
 
-
 jQuery(document).ready(function() {
   var table = $('#items-datatable').DataTable({
     "processing": true,
@@ -61,4 +60,5 @@ $('#items-datatable tbody').on('click', 'td.details-control', function () {
         tr.addClass('shown');
     }
 } );
+
 });

@@ -7,8 +7,11 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    
+    <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
 
+  </head>
+  <%= render "shared/main_header" %>
   <body>
     <%= yield %>
   </body>
