@@ -1,2 +1,0 @@
-class Wallpaper < ApplicationRecord
-end

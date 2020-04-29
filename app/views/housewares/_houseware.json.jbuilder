@@ -1,2 +1,0 @@
-json.extract! houseware, :id, :name, :image, :variation, :body_title, :pattern, :diy, :body_customize, :kit_cost, :buy, :sell, :color1, :color2, :size, :source, :source_notes, :version, :hha_concept1, :hha_concept2, :hha_series, :hha_set, :interact, :tag, :speaker_type, :listing_type, :catalog, :filename, :variant_id, :internal_id, :unique_entry_id, :created_at, :updated_at
-json.url houseware_url(houseware, format: :json)
