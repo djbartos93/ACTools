@@ -9,6 +9,7 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require('datatables.net-bs4')
+require("packs/housewares")
 
 import $ from 'jquery';
 global.$ = jQuery;

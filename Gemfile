@@ -59,3 +59,4 @@ gem 'activerecord-import'
 
 #datatables
 gem 'ajax-datatables-rails'
+gem 'jquery-datatables-rails'

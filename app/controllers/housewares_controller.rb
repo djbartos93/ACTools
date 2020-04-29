@@ -4,10 +4,10 @@ class HousewaresController < ApplicationController
   # GET /housewares
   # GET /housewares.json
   def index
-    @housewares = Houseware.all
+    
     respond_to do |format|
       format.html
-      format.json { render json: UserDatatable.new(params) }
+      format.json { render json: HousewareDatatable.new(params) }
     end
   end
 
