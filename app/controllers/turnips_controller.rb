@@ -84,6 +84,6 @@ class TurnipsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def turnip_params
-      params.require(:turnip).permit(:purchasePrice, :amountPurchased, :salePrice, :spentBells, :madeBells, :week, :tap_link)
+      params.require(:turnip).permit(:purchasePrice, :amountPurchased, :salePrice, :spentBells, :madeBells, :week_of, :tap_link)
     end
 end

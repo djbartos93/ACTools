@@ -9,9 +9,14 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
+
 development:
-  <<: *default
-  database: db/development.sqlite3
+  adapter: postgresql
+  database: actools-dev
+  pool: 25
+  timeout: 5000
+  username:
+  password:
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

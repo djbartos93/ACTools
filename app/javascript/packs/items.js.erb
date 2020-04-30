@@ -1,6 +1,11 @@
 
 /* Formatting function for row details - modify as you need */
+<% name = 'Erb' %>
+
+console.log('Hello world from <%= name %>')
+
 function format ( d ) {
+  if (d.category = 'tops'){
     // `d` is the original data object for the row
     return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
         '<tr>'+
@@ -9,20 +14,24 @@ function format ( d ) {
         '</tr>'+
         '<tr>'+
           '<td>Image:</td>'+
-          '<td><img src="'+d.image+'">'+'</td>'+
-        '</tr>'+
-        '<tr>'+
-          '<td>Closet Image:</td>'+
-          '<td><img src="'+d.closet_image+'">'+'</td>'+
+          '<td><img src="'+d.image+'">'+'<td><img src="'+d.closet_image+'">'+'<td><img src="'+d.storage_image+'">'+'</td>'+
         '</tr>'+
     '</table>';
+  } else {
+    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+        '<tr>'+
+            '<td>Full name:</td>'+
+            '<td>'+d.filename+'</td>'+
+        '</tr>'+
+    '</table>';
+  }
 }
-
 
 jQuery(document).ready(function () {
             var oTable2 = $('#items-datatable').DataTable({
                 "processing": true,
                 "serverSide": true,
+                "pageLength": 50,
                 "ajax": {
                   "url": $('#items-datatable').data('source')
                 },
@@ -56,9 +65,34 @@ jQuery(document).ready(function () {
                       tr.removeClass('shown');
                   }
                   else {
+                      var d = row.data();
+                      // this will display the correct image types for all closet image things
+                      if (d.category == 'tops' || d.category == 'bottoms' || d.category == 'dresses' || d.category == 'headware' || d.category == 'accessories' || d.category == 'socks' || d.category == 'shoes' || d.category == 'bags' || d.category == 'umbrellas'){
+                        row.child( '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+                            '<tr>'+
+                                '<td>Full name:</td>'+
+                                '<td>'+d.closet_image+'</td>'+
+                            '</tr>'+
+                        '</table>' ).show();
+                        tr.addClass('shown');
+                      } else if (d.category == 'music') {
                       // Open this row
-                      row.child( format(row.data()) ).show();
+                      row.child( '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+                          '<tr>'+
+                              '<td>Album image:</td>'+
+                              '<td>'+'<img src="'+d.album_image+'">'+'</td>'+
+                          '</tr>'+
+                      '</table>' ).show();
                       tr.addClass('shown');
+                    } else {
+                      row.child( '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+                          '<tr>'+
+                              '<td>Full name (NOT CLOSET IMAGE):</td>'+
+                              '<td>'+'<img src="'+d.album_image+'">'+'</td>'+
+                          '</tr>'+
+                      '</table>' ).show();
+                      tr.addClass('shown');
+                    }
                   }
               } );
 
@@ -71,7 +105,8 @@ jQuery(document).ready(function () {
                  filter_type: "text"
              }, {
                  column_number: 2,
-                 filter_type: "exclude"
+                 filter_type: "auto_complete",
+                 text_data_delimiter: ","
              }, {
                  column_number: 3,
                  filter_type: "exclude"
@@ -79,8 +114,9 @@ jQuery(document).ready(function () {
              }, {
                  column_number: 4,
                  filter_type: "exclude"
+
              }, {
-                 column_number: 5,
+                 column_number: 5
              }]);
 
              yadcf.exFilterColumn(oTable2, [[0, "Misc"]]);

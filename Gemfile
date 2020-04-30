@@ -67,3 +67,5 @@ gem 'ajax-datatables-rails'
 gem 'jquery-datatables-rails'
 
 gem 'yajl-ruby', require: 'yajl'
+
+gem 'postgresql'

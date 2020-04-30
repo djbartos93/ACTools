@@ -9,7 +9,9 @@
     "bootstrap": "^4.4.1",
     "datatables.net-bs4": "^1.10.20",
     "jquery": "^3.5.0",
+    "jquery-ui-dist": "^1.12.1",
     "popper.js": "^1.16.1",
+    "rails-erb-loader": "^5.5.2",
     "turbolinks": "^5.2.0",
     "yadcf": "^0.9.3"
   },

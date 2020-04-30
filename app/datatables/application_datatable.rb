@@ -31,11 +31,11 @@ class ApplicationDatatable < AjaxDatatablesRails::ActiveRecord
           category: record.category,
           closet_image: record.closet_image,
           variation: record.variation,
+          storage_image: record.storage_image,
+          album_image: record.album_image,
           DT_RowID: record.id
         }
       end
     end
-
-
 
 end

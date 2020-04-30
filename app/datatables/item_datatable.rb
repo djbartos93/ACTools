@@ -4,14 +4,18 @@ class ItemDatatable < ApplicationDatatable
     {
       yadcf_data_5:  ["miscellaneous", "housewares", "wallpapers", "wall-mounted", "floors", "rugs", "fencing", "photos",
       "posters", "tools", "tops", "bottoms", "dresses", "headwear", "accessories", "socks", "shoes", "bags",
-    "umbrellas", "music", "art", "other"]
+    "umbrellas", "music", "art", "other"],
+    yadcf_data_2: select_options_for_variation
     }
   end
 
 
-  def select_options_for_categories
-    Item.pluck(:category)
+  def select_options_for_variation
+    uniquevar = Item.distinct.pluck(:variation)
+    uniquevar.map { |object| { value: object, label: object.to_s } }
   end
+
+
 
   def catname
     @category ||= options[:category]
