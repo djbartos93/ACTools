@@ -70,14 +70,42 @@ jQuery(document).ready(function () {
                       if (d.category == 'tops' || d.category == 'bottoms' || d.category == 'dresses' || d.category == 'headware' || d.category == 'accessories' || d.category == 'socks' || d.category == 'shoes' || d.category == 'bags' || d.category == 'umbrellas'){
                         row.child( '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
                             '<tr>'+
-                                '<td>Full name:</td>'+
-                                '<td>'+d.closet_image+'</td>'+
+                                '<td>Source:</td>'+
+                                '<td>'+d.source+'</td>'+
+                            '</tr>'+
+                            '<tr>'+
+                                '<td>Source:</td>'+
+                                '<td>'+d.source_+'</td>'+
+                            '</tr>'+
+                            '<tr>'+
+                                '<td>style:</td>'+
+                                '<td>'+d.style+'</td>'+
+                            '</tr>'+
+                            '<tr>'+
+                                '<td>primary shape:</td>'+
+                                '<td>'+d.primary_shape+'</td>'+
+                            '</tr>'+
+                            '<tr>'+
+                              '<td>Image:</td>'+
+                              '<td>'+'<img src="'+d.closet_image+'">'+'<td><img src="'+d.storage_image+'">'+'</td>'+
                             '</tr>'+
                         '</table>' ).show();
                         tr.addClass('shown');
                       } else if (d.category == 'music') {
                       // Open this row
                       row.child( '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+                          '<tr>'+
+                              '<td>Source:</td>'+
+                              '<td>'+d.source+'</td>'+
+                          '</tr>'+
+                          '<tr>'+
+                              '<td>Source:</td>'+
+                              '<td>'+d.source_notes+'</td>'+
+                          '</tr>'+
+                          '<tr>'+
+                              '<td>available?</td>'+
+                              '<td>'+d.catalog+'</td>'+
+                          '</tr>'+
                           '<tr>'+
                               '<td>Album image:</td>'+
                               '<td>'+'<img src="'+d.album_image+'">'+'</td>'+

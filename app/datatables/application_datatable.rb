@@ -33,6 +33,12 @@ class ApplicationDatatable < AjaxDatatablesRails::ActiveRecord
           variation: record.variation,
           storage_image: record.storage_image,
           album_image: record.album_image,
+          source: record.source,
+          source_notes: record.source_notes,
+          catalog: record.catalog,
+          primary_shape: record.primary_shape,
+          diy: record.diy,
+          style: record.style,
           DT_RowID: record.id
         }
       end
