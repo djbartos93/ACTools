@@ -11,7 +11,7 @@ class ApplicationDatatable < AjaxDatatablesRails::ActiveRecord
       name: { source: "Item.name"},
       buy: { source: "Item.buy"},
       sell: { source: "Item.sell"},
-      category: { source: "Item.category"}
+      category: { source: "Item.category" }
 
       # id: { source: "User.id", cond: :eq },
       # name: { source: "User.name", cond: :like }
